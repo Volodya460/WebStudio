@@ -73,7 +73,7 @@ function createPortfolioList(arr) {
       return `<li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__img-box">
-                <img src=${el.portfolioList__img} alt="notebook" class="portfolio-list__img" />
+                <img src=${el.portfolioList__img} alt="notebook" width='450px' class="portfolio-list__img" />
                 <div class="overlay">
                   <p class="overlay__text">${el.overlay__text}</p>
 
