@@ -1,0 +1,85 @@
+.service {
+  height: 400px;
+  min-width: 485px;
+  padding: 118px 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/service480.jpg);
+  background-position: center;
+  background-size: cover;
+  // background-attachment: fixed;
+  text-align: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../image/service480@2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet) {
+    min-width: 768px;
+    height: 400px;
+    padding: 118px 204px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../image/service768.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../image/service768@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 452px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../image/service1600.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../image/service1600@2x.jpg);
+    }
+  }
+}
+
+.service__title {
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.4;
+  }
+}
+.serice__button {
+  @extend .button;
+}

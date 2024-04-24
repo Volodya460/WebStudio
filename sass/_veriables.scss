@@ -1,0 +1,111 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --nav-text-color: #212121;
+  --accent-text-color: #2196f3;
+  --white-color: #ffffff;
+  --animation: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+body {
+  background-color: var(--white-color);
+  color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 2;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  border-bottom: 1px solid #ececec;
+}
+.container {
+  width: $mobile;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+.section {
+  min-width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $tablet) {
+    min-width: $tablet;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    min-width: $desktop;
+  }
+}
+
+.section__title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 30px;
+
+  margin: 0;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    padding: 0;
+  }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  background-color: #2196f3;
+  color: var(--white-color);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  min-width: 216px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: none;
+  transition: background-color 250ms var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

@@ -1,0 +1,30 @@
+.portfolio__section {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.portfolio {
+  display: flex;
+
+  gap: 30px;
+}
+.portfolio__item {
+  position: relative;
+}
+
+.portfolio__text {
+  position: absolute;
+  width: 100%;
+  max-height: 70px;
+  padding: 27px 107px;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+  text-align: center;
+  white-space: nowrap;
+  line-height: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}

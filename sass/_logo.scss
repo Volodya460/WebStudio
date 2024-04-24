@@ -1,0 +1,14 @@
+.logo {
+  color: #2196f3;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+  transition: color 250ms var(--animation);
+  &:hover {
+    color: #f45656;
+  }
+}
+.logo__header {
+  color: var(--title-text-color);
+}

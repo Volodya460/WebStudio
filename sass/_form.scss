@@ -1,0 +1,142 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form__Input {
+  width: 448px;
+  height: 40px;
+  padding-left: 40px;
+  border: 1px solid #21212133;
+  border-radius: 4px;
+  transition: outline-color 250ms var(--animation);
+
+  &:invalid {
+    border-color: #f45656;
+  }
+  &:valid {
+    border-color: var(--accent-text-color);
+  }
+
+  @media screen and (max-width: $mobile) {
+    max-width: 300px;
+  }
+}
+
+.form__lable-textarea__text {
+  width: 448px;
+  height: 120px;
+  padding: 16px 12px;
+  resize: none;
+  transition: outline-color 250ms var(--animation);
+
+  &:focus {
+    outline-color: var(--accent-text-color);
+  }
+
+  @media screen and (max-width: $mobile) {
+    max-width: 320px;
+  }
+}
+
+.form__lable-textarea {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.form__lable-textarea__span {
+  color: inherit;
+  transition: color 250ms var(--animation);
+
+  .form__lable-textarea:focus-within & {
+    color: var(--accent-text-color);
+  }
+}
+
+.form__button {
+  @extend .button;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  margin-top: 30px;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.form__lable__checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form__lable__checkbox__icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: inherit;
+  border: 2px solid #2a2a2a;
+  border-radius: 4px;
+  transition: background-color 250ms var(--animation),
+    border-color 250ms var(--animation);
+}
+
+.form__lable__checkbox__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  appearance: none;
+}
+.form__lable__checkbox__input:checked + .form__lable__checkbox__icon {
+  background-color: var(--accent-text-color);
+  background-position: 50% 50%;
+  background-image: url("../image/Vector.svg");
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-text-color);
+}
+
+.form__lable__checkbox__span {
+  margin-left: 10px;
+}
+.form__box {
+  position: relative;
+  margin-top: 30px;
+}
+.form__lable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  opacity: 1;
+  transition: opacity 250ms var(--animation);
+}
+.form__svg {
+  position: absolute;
+  fill: inherit;
+  top: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+  transition: transform 250ms var(--animation), color 500ms var(--animation);
+  .form__Input:focus + &,
+  .form__Input:not(:placeholder-shown) + & {
+    transform: translate(50%, -110%);
+    fill: var(--accent-text-color);
+    outline-color: var(--accent-text-color);
+  }
+}
+
+.form__Input:focus {
+  outline-color: var(--accent-text-color);
+}
+
+.form__Input:focus ~ .form__lable,
+.form__Input:not(:placeholder-shown) ~ .form__lable {
+  opacity: 0;
+}
+.form__Input:invalid {
+  border-color: #f45656;
+}
+.form__Input:valid {
+  border-color: var(--accent-text-color);
+}

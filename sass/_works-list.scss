@@ -1,0 +1,104 @@
+.works-list {
+  padding: 94px 215px;
+}
+.container__margin__works-list {
+  margin-bottom: 54px;
+}
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  font-size: 16px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.portfolio-list__item {
+  width: 450px;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    flex-basis: calc(100% / 2 - 30px);
+    width: 350px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+    width: 350px;
+  }
+}
+.portfolio-list__link {
+  display: block;
+  height: 100%;
+}
+
+.portfolio-list__title {
+  color: var(--title-text-color);
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  margin: 0;
+
+  white-space: nowrap;
+}
+.portfolio-list__text {
+  margin: 0;
+  color: var(--primary-text-color);
+}
+.portfolio-list__img-box {
+  position: relative;
+  overflow: hidden;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    width: 350px;
+    max-height: 270px;
+  }
+}
+.portfolio-list__text-box {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  transform: translateY(0%);
+  transition: transform 800ms var(--animation);
+}
+
+.overlay__text {
+  position: absolute;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+
+  opacity: 0;
+  color: #ffffff;
+  transition: opacity 500ms var(--animation), transform 700ms var(--animation);
+}
+
+.portfolio-list__item:hover,
+.portfolio-list__item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list__item:hover .overlay {
+  transform: translateY(-100%);
+}
+.portfolio-list__item:hover .overlay__text {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
